@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar cncexample;
+
+public <cnccommand> = [ <start-polite> ] <command> ;
+
+<start-polite> = ( please | would you | could you | kindly ) + ;
+
+<command> = <operation> [ <determiner> ] <object> ;
+
+<operation> = ( open | move | copy | delete | close ) {OPERATION} ;
+<determiner> = ( a | an | the ) ;
+
+<object> = ( file | window | menu | link | directory) {OBJECT} ;
